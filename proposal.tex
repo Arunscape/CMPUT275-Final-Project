@@ -26,38 +26,49 @@
 
 %title page
 \title{CMPUT 275 Project Proposal\\
-\vspace{.25cm}\large Insert title here \vspace{-.5cm}}
-\author{\LARGE Arun Woosaree  \&\& Tamara Bojovic}
+\vspace{.25cm}\large Chess \vspace{-.5cm}}
+\author{\LARGE Arun Woosaree  \& Tamara Bojovic}
 \date{\today}
 %actual document
 \begin{document}
   \maketitle %insert titlepage here
   %Introduction
+
   \section{Introduction}
-  Our amazing program will do this
+  We are going to make a boss ass chess program
 
-  \section{Sectiontitle}
-  This is how our program will do it
+    \subsection{Python classes}
+    Will be used to store information about the chess pieces.
+    Each chess piece can inherit from the the chess piece class, and then have
+    their own moves. For example, we could define the catsle and bishop class, and then
+    the queen could inherit from those classes.
 
-    \subsection{Feature 1}
-    wow
+    \subsection{Graph}
+    A tree can be used for move generation, from which we can detect valid moves
+    in a more efficient was compared to checking every single square.
 
-    \subsection{feature 2}
-    woooow
+    \subsection{Basic computer player}
+    Once we have valid move generation down, we can maybe get a rudimentary
+    computer player working to play chess against
 
-    \subsection{feature 3}
-    wooooooooooooooow
+    \subsection{Arduino}
+    If time permits, we can use server communication to let the player
+    interact with a joystick, and pyserial to let a computer act as a sever for processing moves
+
+
 
 
   \section{Timeline}
 
   \begin{itemize}
-    \item Date 1: we will implement this
-    \item Date 2: and this
-    \item date3
-    \item date 4
-    \item .
-    \item.
+    \item March 16: Finish making this proposal
+    \item March 21: Work on Assignment 2
+    \item March 23: work some more on Assignment 2
+    \item March 26: Refine our plans and see what's really possible
+    \item March 28: Work on chess pieces and move generation
+    \item.March 30: Get it working with the Arduino
+    \item April 02: Sart work on computer logic
+    \item April 04: idk
     \item Finishing touches
     \item present
   \end{itemize}
