@@ -4,7 +4,7 @@
 %sets length of spacing between paragraphs
 \setlength{\parskip}{1em}
 % \usepackage{url}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -34,56 +34,51 @@
   \maketitle %insert titlepage here
   %Introduction
 
-  \section{Description}
-    The project is an improvement on our CMPUT 274 final project, which was a
-    player vs. player Arduino chess game. We plan to first import our project
-    into python, making use of the object oriented features of python, that we
-    did not use in the old version. For example, each chess piece will inherit
-    from a generic chess piece class, and have their own moves. Instead of the
-    Arduino, we will use pygame as our GUI. We will improve on the algorithms
-    from our original game, using new algorithmic knowledge gained in 275.
-    (particularly check and checkmate tests, which were inefficient). Once a
-    player vs. player implementation is up and running, we will then focus on
-    creating a basic computer opponent. This will involve a move generator, and
-    an evaluator function that determines scores for different board positions.
-    We would use our knowledge of search trees, to implement the computer
-    player’s moves.
-
-    \subsection{Python classes}
-    Will be used to store information about the chess pieces.
-    Each chess piece can inherit from the the chess piece class, and then have
-    their own moves. For example, we could define the catsle and bishop class, and then
-    the queen could inherit from those classes.
-
-    \subsection{Graph}
-    A tree can be used for move generation, from which we can detect valid moves
-    in a more efficient was compared to checking every single square.
-
-    \subsection{Basic computer player}
-    Once we have valid move generation down, we can maybe get a rudimentary
-    computer player working to play chess against
-
-    \subsection{Arduino}
-    If time permits, we can use server communication to let the player
-    interact with a joystick, and pyserial to let a computer act as a sever for processing moves
-
-
+  \section{Introduction}
+  The project is an improvement on our CMPUT 274 final project, which was a
+  player vs. player Arduino chess game. We plan to first import our project into
+  python, making use of the object oriented features of python, that we did not
+  use in the old version. For example, each chess piece will inherit from a
+  generic chess piece class, and have their own moves. Instead of the Arduino,
+  we will use pygame as our GUI. We will improve on the algorithms from our
+  original game, using new algorithmic knowledge gained in 275. (particularly
+  check and checkmate tests, which were inefficient). Once a player vs. player
+  implementation is up and running, we will then focus on creating a basic
+  computer opponent. This will involve a move generator, and an evaluator
+  function that determines scores for different board positions. We would use
+  our knowledge of search trees, to implement the computer player’s moves.
 
 
   \section{Timeline}
 
-  \begin{itemize}
-    \item March 16: Finish making this proposal
-    \item March 21: Work on Assignment 2
-    \item March 23: work some more on Assignment 2
-    \item March 26: Refine our plans and see what's really possible
-    \item March 28: Work on chess pieces and move generation
-    \item.March 30: Get it working with the Arduino
-    \item April 02: Sart work on computer logic
-    \item April 04: idk
-    \item Finishing touches
-    \item present
-  \end{itemize}
+  \begin{enumerate}
+    \item \textbf{March 22}\\ Import our old project into python. Create classes
+    for the pieces, set up the board representation and use our old functions
+    within the new classes. Demo: Fully working player vs. player chess game in
+    pygame
+
+    \item \textbf{March 25}\\ Improve the existing algorithms to be more
+    efficient, with our new knowledge of search trees and graphs. Focus on the
+    very inefficient check/checkmate detection function Demo: Player vs. player
+    chess game with improved algorithms
+
+    \item \textbf{April 2}\\ Create a move generator, that generates all the
+    possible moves from a certain board position. Old functions that checked for
+    valid moves can now utilize this. Computer player will select a move
+    randomly, no optimization or intelligence Demo: Ability to play against a
+    very dumb computer opponent
+
+    \item \textbf{April 6}\\ Create a simple evaluation function, that
+    calculates the best move just based on the pieces on the board. More
+    important pieces will have a higher score. Demo: Computer opponent has some
+    method to their madness, but cannot “look ahead” to pick the best move
+
+    \item \textbf{April 10}\\ Increase the depth of the search to 3, and use the
+    minimax algorithm to select the best move. Improve the evaluation function
+    by adding more bonuses to scores, such as a protected king, control of the
+    center of the board adding a bonus Demo: A fully working chess game with a
+    basic computer opponent.
+\end{enumerate}
 
 
 
