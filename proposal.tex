@@ -34,8 +34,20 @@
   \maketitle %insert titlepage here
   %Introduction
 
-  \section{Introduction}
-  We are going to make a boss ass chess program
+  \section{Description}
+    The project is an improvement on our CMPUT 274 final project, which was a
+    player vs. player Arduino chess game. We plan to first import our project
+    into python, making use of the object oriented features of python, that we
+    did not use in the old version. For example, each chess piece will inherit
+    from a generic chess piece class, and have their own moves. Instead of the
+    Arduino, we will use pygame as our GUI. We will improve on the algorithms
+    from our original game, using new algorithmic knowledge gained in 275.
+    (particularly check and checkmate tests, which were inefficient). Once a
+    player vs. player implementation is up and running, we will then focus on
+    creating a basic computer opponent. This will involve a move generator, and
+    an evaluator function that determines scores for different board positions.
+    We would use our knowledge of search trees, to implement the computer
+    player’s moves.
 
     \subsection{Python classes}
     Will be used to store information about the chess pieces.
